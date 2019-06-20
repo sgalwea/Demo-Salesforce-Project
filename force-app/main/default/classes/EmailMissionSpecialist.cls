@@ -4,11 +4,11 @@ public class EmailMissionSpecialist {
       
       Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
       String[] toAddresses = new String[] {address};
-      String[] CcAddress =new String[] {'sgalwea@gmail.com'};
-      mail.setToAddresses(toAddresses);
-      mail.setSubject(subject);
-      mail.setPlainTextBody(body);
-      mail.ccaddresses(CcAddress);
+      String[] CcAddresses = new String[] {'sgalwea@gmail.com'};
+            mail.setToAddresses(toAddresses);
+       		mail.setSubject(subject);
+       		mail.setPlainTextBody(body);
+       		mail.setCcAddresses(CcAddresses);
       
       Messaging.SendEmailResult[] results = Messaging.sendEmail(
                                 new Messaging.SingleEmailMessage[] { mail });
